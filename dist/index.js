@@ -171,18 +171,14 @@ TradingViewWidget.propTypes = {
   largeChartUrl: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string
 };
 TradingViewWidget.defaultProps = {
-
   autosize: false,
   dateRange: "1m",
   theme: Themes.LIGHT,
-  trendLineColor: "#37a6ef",
-  underLineColor: "#e3f2fd",
   timezone: 'Etc/UTC',
   toolbar_bg: '#F1F3F6',
   widgetType: 'widget',
   width: "100%",
-  height: 200,
-  withdateranges: false
+  height: 200
 };
 /* harmony default export */ __webpack_exports__["default"] = (TradingViewWidget);
 
