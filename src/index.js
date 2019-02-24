@@ -1,131 +1,26 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-export const BarStyles = {
-  BARS: '0',
-  CANDLES: '1',
-  HOLLOW_CANDLES: '9',
-  HEIKIN_ASHI: '8',
-  LINE: '2',
-  AREA: '3',
-  RENKO: '4',
-  LINE_BREAK: '7',
-  KAGI: '5',
-  POINT_AND_FIGURE: '6'
-};
-
-export const IntervalTypes = {
-  D: 'D',
-  W: 'W'
-};
-
-export const RangeTypes = {
-  YTD: 'ytd',
-  ALL: 'all'
-};
-
-export const Themes = {
-  LIGHT: 'Light',
-  DARK: 'Dark'
-};
-
 const SCRIPT_ID = 'tradingview-widget-script';
 const CONTAINER_ID = 'tradingview-widget';
 
 export default class TradingViewWidget extends PureComponent {
   static propTypes = {
-    allow_symbol_change: PropTypes.bool,
-    autosize: PropTypes.bool,
-    calendar: PropTypes.bool,
-    details: PropTypes.bool,
-    enable_publishing: PropTypes.bool,
-    height: PropTypes.number,
-    hideideas: PropTypes.bool,
-    hide_legend: PropTypes.bool,
-    hide_side_toolbar: PropTypes.bool,
-    hide_top_toolbar: PropTypes.bool,
-    hotlist: PropTypes.bool,
-    interval: PropTypes.oneOf([
-      1,
-      3,
-      5,
-      15,
-      30,
-      60,
-      120,
-      180,
-      '1',
-      '3',
-      '5',
-      '15',
-      '30',
-      '60',
-      '120',
-      '180',
-      IntervalTypes.D,
-      IntervalTypes.W
-    ]),
-    locale: PropTypes.string,
-    news: PropTypes.arrayOf(PropTypes.string),
-    no_referral_id: PropTypes.bool,
-    popup_height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-    popup_width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-    range: PropTypes.oneOf([
-      '1d',
-      '5d',
-      '1m',
-      '3m',
-      '6m',
-      RangeTypes.YTD,
-      '12m',
-      '60m',
-      RangeTypes.ALL
-    ]),
-    referral_id: PropTypes.string,
-    save_image: PropTypes.bool,
-    show_popup_button: PropTypes.bool,
-    studies: PropTypes.arrayOf(PropTypes.string),
-    style: PropTypes.oneOf([
-      BarStyles.BARS,
-      BarStyles.CANDLES,
-      BarStyles.HOLLOW_CANDLES,
-      BarStyles.HEIKIN_ASHI,
-      BarStyles.LINE,
-      BarStyles.AREA,
-      BarStyles.RENKO,
-      BarStyles.LINE_BREAK,
-      BarStyles.KAGI,
-      BarStyles.POINT_AND_FIGURE
-    ]),
-    symbol: PropTypes.string.isRequired,
-    theme: PropTypes.oneOf([Themes.LIGHT, Themes.DARK]),
-    timezone: PropTypes.string,
-    toolbar_bg: PropTypes.string,
-    watchlist: PropTypes.arrayOf(PropTypes.string),
-    widgetType: PropTypes.string,
-    width: PropTypes.number,
-    withdateranges: PropTypes.bool
+    largeChartUrl: PropTypes.string
   };
 
   static defaultProps = {
-    allow_symbol_change: true,
+    
     autosize: false,
-    enable_publishing: false,
-    height: 610,
-    hideideas: true,
-    hide_legend: false,
-    hide_side_toolbar: true,
-    hide_top_toolbar: false,
-    interval: IntervalTypes.D,
-    locale: 'en',
-    save_image: true,
-    show_popup_button: false,
-    style: BarStyles.CANDLES,
+    dateRange: "1m"
     theme: Themes.LIGHT,
+    trendLineColor: "#37a6ef",
+    underLineColor: "#e3f2fd",
     timezone: 'Etc/UTC',
     toolbar_bg: '#F1F3F6',
     widgetType: 'widget',
-    width: 980,
+    width: "100%",
+    height: 200
     withdateranges: false
   };
 
@@ -163,7 +58,7 @@ export default class TradingViewWidget extends PureComponent {
     script.id = SCRIPT_ID;
     script.type = 'text/javascript';
     script.async = true;
-    script.src = 'https://s3.tradingview.com/tv.js';
+    script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js';
     script.onload = onload;
     document.getElementsByTagName('head')[0].appendChild(script);
   };
