@@ -174,9 +174,6 @@ TradingViewWidget.defaultProps = {
   autosize: false,
   dateRange: "1m",
   theme: Themes.LIGHT,
-  timezone: 'Etc/UTC',
-  toolbar_bg: '#F1F3F6',
-  widgetType: 'widget',
   width: "100%",
   height: 200
 };
