@@ -38,18 +38,14 @@ export default class TradingViewWidget extends PureComponent {
   };
 
   static defaultProps = {
-    
     autosize: false,
     dateRange: "1m",
     theme: Themes.LIGHT,
-    trendLineColor: "#37a6ef",
-    underLineColor: "#e3f2fd",
     timezone: 'Etc/UTC',
     toolbar_bg: '#F1F3F6',
     widgetType: 'widget',
     width: "100%",
     height: 200,
-    withdateranges: false
   };
 
   containerId = `${CONTAINER_ID}-${Math.random()}`;
