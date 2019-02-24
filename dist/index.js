@@ -15,6 +15,10 @@ return webpackJsonpreact_tradingview_widget([1],{
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BarStyles", function() { return BarStyles; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IntervalTypes", function() { return IntervalTypes; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RangeTypes", function() { return RangeTypes; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Themes", function() { return Themes; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(13);
@@ -31,6 +35,34 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
+
+var BarStyles = {
+  BARS: '0',
+  CANDLES: '1',
+  HOLLOW_CANDLES: '9',
+  HEIKIN_ASHI: '8',
+  LINE: '2',
+  AREA: '3',
+  RENKO: '4',
+  LINE_BREAK: '7',
+  KAGI: '5',
+  POINT_AND_FIGURE: '6'
+};
+
+var IntervalTypes = {
+  D: 'D',
+  W: 'W'
+};
+
+var RangeTypes = {
+  YTD: 'ytd',
+  ALL: 'all'
+};
+
+var Themes = {
+  LIGHT: 'Light',
+  DARK: 'Dark'
+};
 
 var SCRIPT_ID = 'tradingview-widget-script';
 var CONTAINER_ID = 'tradingview-widget';
