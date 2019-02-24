@@ -45,5 +45,8 @@
     "react-dom": "^16.2.0",
     "react-hot-loader": "next",
     "webpack": "^3.8.1"
+  },
+  "dependencies": {
+    "react-tradingview-widget": "https://github.com/rezart/react-tradingview-widget.git"
   }
 }

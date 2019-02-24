@@ -12,7 +12,7 @@ export default class TradingViewWidget extends PureComponent {
   static defaultProps = {
     
     autosize: false,
-    dateRange: "1m"
+    dateRange: "1m",
     theme: Themes.LIGHT,
     trendLineColor: "#37a6ef",
     underLineColor: "#e3f2fd",
@@ -20,7 +20,7 @@ export default class TradingViewWidget extends PureComponent {
     toolbar_bg: '#F1F3F6',
     widgetType: 'widget',
     width: "100%",
-    height: 200
+    height: 200,
     withdateranges: false
   };
 
